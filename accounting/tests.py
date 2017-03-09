@@ -20,7 +20,7 @@ class TestAccountTransaction(TestCase):
         # user=
         self.account1.withdraw(10, self.account2)
         self.assertEquals(self.account1.amount, 15)
-        self.assertEquals(self.account2.amount, 10)
+        self.assertEquals(self.account2.amount, 11)
 
     def test_transaction_whith_enough_money_fails(self):
         self.assertRaises(
