@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 
 ] + PROJECT_APPS
 
-JENKINS_TASKS = (
+JENKINS_TASKSx = (
     'django_jenkins.tasks.run_pylint',
     #'django_jenkins.tasks.with_coverage',
     # 'django_jenkins.tasks.django_tests',   # select one django or
@@ -57,6 +57,11 @@ JENKINS_TASKS = (
     'django_jenkins.tasks.run_csslint',
     #'django_jenkins.tasks.run_sloccount',
     #'django_jenkins.tasks.lettuce_tests',
+)
+
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_pylint',
 )
 
 
