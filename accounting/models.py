@@ -2,6 +2,17 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class Actual(models.Model):
+    name = models.CharField(max_length=10, default='A1')
+
+    class Meta:
+        verbose_name = ('Actual')
+        verbose_name_plural = ('Actuales')
+
+    def __str__(self):
+        return self.name
+
+
 class Currency(models.Model):
     name = models.CharField(max_length=10, default='C1')
 
